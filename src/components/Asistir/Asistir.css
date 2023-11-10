@@ -24,6 +24,37 @@
     width: 50%;
     animation: slideIn 1s ease-in-out;
 }
+/* Estilo para los botones en estado activo */
+
+  
+  .form-btn.active.yes {
+    background-color: #4CAF50; /* Color verde para "Si asistiré" */
+    color: white;
+    transition: .4s;
+  }
+  
+  .form-btn.active.no {
+    background-color: #FF0000; /* Color rojo para "No asistiré" */
+    color: white;
+    transition: .4s;
+  }
+  
+  .form-btn.active.maybe {
+    background-color: #FFA500; /* Color naranja para "Quizás asistiré" */
+    color: white;
+    transition: .4s;
+  }
+  
+ 
+  /* Estilo para el botón de validar en estado activo */
+  .form-btn.active.ep {
+    background-color: #fff;
+    color: rgb(1, 1, 1);
+    transition: .4s;
+  }
+  
+  /* Puedes agregar más estilos específicos para el estado activo según tus necesidades */
+  
 
 @keyframes slideIn {
     0% {
@@ -44,6 +75,7 @@
     font-size: 24px;
     margin-top: 10px;
     font-family: 'Caveat', cursive;
+    border-bottom: solid #f6aa93;
 }
 
 .btn {
@@ -53,16 +85,14 @@
 .form-btn {
     cursor: pointer;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     border: hidden;
     background: none;
-    border-bottom: solid 2px transparent;
-    transition: border-bottom 0.3s ease-in-out;
+    transition: .4s;
+   
 }
 
-.form-btn:hover {
-    border-bottom: solid 2px #3498db; /* Cambia el color a tu preferencia */
-}
+
    .tarjet-text {
     position: relative;
     width: 700px;
@@ -131,6 +161,26 @@
         margin-bottom: 30px;
     }
     
-   
+    .form-btn {
+        cursor: pointer;
+        font-size: 18px;
+        margin-bottom: 0px;
+        border: hidden;
+        background: none;
+        border-radius: 20px;
+        transition: border-bottom 0.3s ease-in-out;
+        transition: .4s;
+        background-color: #f6aa93;
+    }
+    .validar-btn{
+        font-size: 18px;
+        padding: 2px 10px;
+        border: hidden;
+        background-color: transparent;
+        
+    }
+    .form-btn:hover {
+        border-bottom: solid 2px #3498db; /* Cambia el color a tu preferencia */
+    }
      
    }

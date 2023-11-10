@@ -17,7 +17,7 @@
     top: 0;
     right: -100%; /* Inicialmente fuera de la pantalla */
     width: 100%;
-    height: 100%;
+    
     background-color: #fff;
     overflow: hidden;
     display: flex;
@@ -44,12 +44,13 @@
   /* Lista de usuarios */
   .ul {
     list-style: none;
+    font-family: 'Caveat', cursive;
     padding: 0;
   }
   
   .ul li {
     padding: 10px;
-    border-bottom: 1px solid #ccc;
+    
   }
   
   /* Otros estilos según tu preferencia */
