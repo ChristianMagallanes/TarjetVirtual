@@ -1,0 +1,123 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color:transparent ;
+    width: 100%;
+}
+
+.imagen-tarjeta {
+    height: 500px;
+    width: 100%;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.input {
+    margin-bottom: 10px;
+    width: 60%;
+}
+
+.btn {
+    background-color: #3498db;
+}
+
+.form-btn {
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border: hidden;
+    background: none;
+    border-bottom: solid 2px transparent;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+.form-btn:hover {
+    border-bottom: solid 2px #3498db; /* Cambia el color a tu preferencia */
+}
+
+
+
+   .tarjet-text {
+    position: relative;
+    bottom: 170px;
+    left: 600px;
+    
+    width: 700px;
+    overflow: hidden; /* Evita que el contenido exceda del contenedor */
+  }
+  
+  .text {
+    font-size: 40px;
+    
+    font-family: 'Caveat', cursive;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto si se corta */
+    opacity: 0; /* Inicialmente oculto */
+    animation: fadeIn 5s forwards; /* Nombre de la animación, duración y retención del último fotograma */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Opacidad al principio de la animación */
+    }
+    to {
+        opacity: 1; /* Opacidad al final de la animación */
+    }
+}
+
+  
+ 
+/* Media query para tablet (entre 600px y 767px) */
+@media only screen and (max-width: 767px) {
+    .imagen-tarjeta {
+        height: 400px;
+        width: 100%;
+        animation: slideIn 1s ease-in-out;
+    }
+    .tarjet-text {
+        text-align: left;
+        position: static;
+        width: 90%;
+       
+    }
+    .text {
+        font-size: 34px;
+        white-space: wrap;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+   
+   /* Media query para móvil (menores de 600px) */
+   @media only screen and (max-width: 599px) {
+    .imagen-tarjeta {
+        height: 300px;
+        width: 100%;
+        animation: slideIn 1s ease-in-out;
+    }
+    .tarjet-text{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+   
+     
+   }
