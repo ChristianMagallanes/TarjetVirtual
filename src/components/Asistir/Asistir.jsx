@@ -37,6 +37,7 @@ const RegistroUsuarios = () => {
       <div className="tarjet-text">
       <p className="text">hola soy martina y, quiero invitarte este tanto tanto a mi cumpleaños</p>
     </div>
+      <div className='confirmar-container'>
       <h2>Confirmacion</h2>
       <input className='input'
         type="text"
@@ -44,12 +45,15 @@ const RegistroUsuarios = () => {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      
-        <button className='form-btn' onClick={() => handleAsistencia(true)}>Si asistiré</button>
+      <div className='confirmar-btns'>
+        
+      <button className='form-btn' onClick={() => handleAsistencia(true)}>Si asistiré</button>
         <button className='form-btn' onClick={() => handleAsistencia(false)}>No asistiré</button>
         <button className='form-btn' onClick={() => handleAsistencia(null)}>Quizás asistiré</button>
       
       <button onClick={handleRegistro}>Validar</button>
+      </div>
+      </div>
     </div>
     
   );
