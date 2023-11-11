@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../Firebase/FirebaseConfig';
+import { FaSquareWhatsapp } from 'react-icons/fa6';
 import Swal from 'sweetalert2';
 import "./Asistir.css";
 
@@ -75,7 +76,7 @@ const Asistir = () => {
   };
 
   return (
-    <div className='form'>
+    
       <div className='confirmar-container'>
         <h2>Confirmacion</h2>
         <input
@@ -93,16 +94,16 @@ const Asistir = () => {
             No asistiré
           </button>
           
-          <button className="validar-btn" onClick={handleValidar}>
+          <button className="validar-btn2" onClick={handleValidar}>
             Validar
           </button>
 
           <button className="compartir-whatsapp-btn" onClick={handleCompartirWhatsApp}>
-            Compartir por WhatsApp
+          <FaSquareWhatsapp className='wpp-ico' />
           </button>
         </div>
       </div>
-    </div>
+   
   );
 };
 
