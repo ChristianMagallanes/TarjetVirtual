@@ -1,7 +1,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+   
     
     align-items: center;
     background-color:transparent ;
@@ -19,11 +19,7 @@
     justify-content: center;
 }
 
-.imagen-tarjeta {
-    height: 500px;
-    width: 50%;
-    animation: slideIn 1s ease-in-out;
-}
+
 /* Estilo para los botones en estado activo */
 
   
@@ -96,16 +92,27 @@
    .tarjet-text {
     position: relative;
     width: 700px;
+    height: 1000px;
   }
   
   .text {
-    font-size: 40px;
+    font-size: 20px;
     
     font-family: 'Caveat', cursive;
     overflow: hidden;
     text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto si se corta */
     opacity: 0; /* Inicialmente oculto */
-    animation: fadeIn 5s forwards; /* Nombre de la animación, duración y retención del último fotograma */
+    animation: fadeIn  forwards; /* Nombre de la animación, duración y retención del último fotograma */
+}
+.mensaje-container{
+    height: 47vh;
+}
+.mensaje{
+    font-size: 38px;
+}
+.confirmar-container{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
 }
 
 @keyframes fadeIn {
@@ -124,12 +131,13 @@
     .imagen-tarjeta {
         height: 400px;
         width: 100%;
-        animation: slideIn 1s ease-in-out;
+        animation: slideIn 2s ease-in-out;
     }
     .tarjet-text {
         text-align: left;
         
         width: 90%;
+        
         
        
     }
@@ -151,11 +159,7 @@
    
    /* Media query para móvil (menores de 600px) */
    @media only screen and (max-width: 599px) {
-    .imagen-tarjeta {
-        height: 300px;
-        width: 100%;
-        animation: slideIn 1s ease-in-out;
-    }
+    
     .tarjet-text{
         margin-top: 30px;
         margin-bottom: 30px;

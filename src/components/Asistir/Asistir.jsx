@@ -3,9 +3,8 @@ import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../Firebase/FirebaseConfig';
 import Swal from 'sweetalert2';
 import "./Asistir.css";
-import imagenTarjeta from "../../assets/tarjet.png";
 
-const RegistroUsuarios = () => {
+const Asistir = () => {
   const [name, setName] = useState('');
   const [asistira, setAsistira] = useState(null);
 
@@ -64,16 +63,19 @@ const RegistroUsuarios = () => {
     }
   };
 
+  const handleCompartirWhatsApp = () => {
+    // Construir el mensaje para compartir en WhatsApp
+    const mensaje = `¡Hola! Acabo de confirmar mi asistencia a la página de Festejando Mis 15. ¿Te gustaría unirte? Visita: https://festejando-mis-15.netlify.app/`;
+
+    // Crear el enlace de WhatsApp con el mensaje
+    const enlaceWhatsApp = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensaje)}`;
+
+    // Abrir la ventana de WhatsApp para compartir el mensaje
+    window.open(enlaceWhatsApp, '_blank');
+  };
+
   return (
     <div className='form'>
-      <img
-        src={imagenTarjeta}
-        alt="Descripción de la imagen"
-        className="imagen-tarjeta"
-      />
-      <div className="tarjet-text">
-        <p className="text">hola soy martina y, quiero invitarte este tanto tanto a mi cumpleaños</p>
-      </div>
       <div className='confirmar-container'>
         <h2>Confirmacion</h2>
         <input
@@ -90,11 +92,13 @@ const RegistroUsuarios = () => {
           <button className={`form-btn no ${asistira === false ? 'active' : ''}`} onClick={() => handleAsistencia(false)}>
             No asistiré
           </button>
-          <button className={`form-btn maybe ${asistira === null ? 'active' : ''}`} onClick={() => handleAsistencia(null)}>
-            Quizás asistiré
-          </button>
-          <button className={`form-btn validar-btn ${asistira !== null ? 'active' : ''}`} onClick={handleValidar}>
+          
+          <button className="validar-btn" onClick={handleValidar}>
             Validar
+          </button>
+
+          <button className="compartir-whatsapp-btn" onClick={handleCompartirWhatsApp}>
+            Compartir por WhatsApp
           </button>
         </div>
       </div>
@@ -102,4 +106,4 @@ const RegistroUsuarios = () => {
   );
 };
 
-export default RegistroUsuarios;
+export default Asistir;

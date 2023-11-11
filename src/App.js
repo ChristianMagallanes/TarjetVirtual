@@ -1,58 +1,42 @@
 import React, { useState, useEffect } from 'react';
-import { CSSTransition } from 'react-transition-group';
-import RegistroUsuarios from './components/Asistir/Asistir';
-import UsuariosRegistrados from './components/Registros/Registros';
+import { Link } from 'react-router-dom';
+import imagenTarjeta from "./assets/tarjet.png";
 import "./App.css";
-
-import backgroundMusic from './music.mp3'; // Reemplaza con la ruta correcta de tu canción
+import Asistir from './components/Asistir/Asistir';
 
 function App() {
-  const [showWelcome, setShowWelcome] = useState(true);
-  const [audioElement, setAudioElement] = useState(null);
+  const [typedText, setTypedText] = useState('');
+  const [originalText, setOriginalText] = useState('hola soy martina y, quiero invitarte este tanto tanto a mi cumpleaños te invito a mi cumpleaños de 15 espero q la pasemos muy bien ekisde ekisde ekisde ajsdjasdas ay va la bala tajala la wea sucia ekisde por q xd xd exde mi primera chamba');
+  const [showAsistir, setShowAsistir] = useState(false);
 
   useEffect(() => {
-    // Crear el elemento de audio
-    const audio = new Audio(backgroundMusic);
-    audio.loop = true;
-    setAudioElement(audio);
+    const interval = setInterval(() => {
+      setTypedText(originalText.substring(0, typedText.length + 1));
+    }, 50);
 
-    // Ocultar el mensaje de bienvenida después de 5 segundos
-    const timeout = setTimeout(() => {
-      setShowWelcome(false);
-    }, 5000);
+    return () => clearInterval(interval);
+  }, [typedText, originalText]);
 
-    return () => {
-      // Detener la música de fondo cuando el componente se desmonta
-      if (audio) {
-        audio.pause();
-        audio.currentTime = 0;
-      }
-      clearTimeout(timeout);
-    };
-  }, []);
-
-  const handlePlayButtonClick = () => {
-    // Reproducir la música al hacer clic en el botón
-    if (audioElement) {
-      audioElement.play();
-    }
+  const handleShowAsistir = () => {
+    setShowAsistir(true);
   };
 
   return (
     <div className='container'>
-      <CSSTransition
-        in={showWelcome}
-        timeout={300}
-        classNames="welcome"
-        unmountOnExit
-      >
-        <div className='welcome-message'>
-          <div className='welcome-text'>Bienvenido</div>
-          <button onClick={handlePlayButtonClick}>Reproducir</button>
-        </div>
-      </CSSTransition>
-      <RegistroUsuarios />
-      <UsuariosRegistrados />
+      <img
+        src={imagenTarjeta}
+        alt="Descripción de la imagen"
+        className="imagen-tarjeta"
+      />
+      <div className="tarjet-text">
+        <p className="text">{typedText}</p>
+      </div>
+      {!showAsistir && (
+        <button className='btn' onClick={handleShowAsistir}>
+          confirmar
+        </button>
+      )}
+      {showAsistir && <Asistir />}
     </div>
   );
 }

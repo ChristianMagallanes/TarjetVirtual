@@ -1,0 +1,35 @@
+/* Invitacion.css */
+.welcome-message {
+    height: 200px;
+    width: 100%;
+  }
+  
+  .invitation-text {
+    /* Estilos para el texto de la invitación */
+    font-size: 1.5em;
+    font-weight: bold;
+    /* Añade otros estilos según sea necesario */
+  }
+  
+  .welcome-enter {
+    /* Estilos para la entrada de la animación */
+    opacity: 0;
+  }
+  
+  .welcome-enter-active {
+    /* Estilos activos durante la entrada de la animación */
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+  
+  .welcome-exit {
+    /* Estilos para la salida de la animación */
+    opacity: 1;
+  }
+  
+  .welcome-exit-active {
+    /* Estilos activos durante la salida de la animación */
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+  

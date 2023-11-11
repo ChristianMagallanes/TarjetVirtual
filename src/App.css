@@ -61,6 +61,39 @@
   opacity: 1;
   transform: translateY(0);
 }
+/* App.css */
+
+/* Otros estilos de tu aplicación */
+
+.usuarios-registrados-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.usuarios-registrados-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.usuarios-registrados-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.usuarios-registrados-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+.imagen-tarjeta {
+  height: 500px;
+  width: 50%;
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Otros estilos de tu aplicación */
+
 
 
 /* Media query para tablet (entre 600px y 767px) */
@@ -72,7 +105,11 @@
 
 /* Media query para móvil (menores de 600px) */
 @media only screen and (max-width: 599px) {
- 
+  .imagen-tarjeta {
+    height: 300px;
+    width: 100%;
+    animation: slideIn 1s ease-in-out;
+}
 
   
 }
