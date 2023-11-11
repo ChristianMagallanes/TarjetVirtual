@@ -25,6 +25,10 @@ function App() {
     };
   }, [typedText, originalText]);
 
+  const handleCerrarAsistir = () => {
+    setShowAsistir(false);
+  };
+
   return (
     <div className='container'>
       <img
@@ -44,7 +48,14 @@ function App() {
         </div>
       )}
 
-      {showAsistir && <div className="full-screen-container"><Asistir /></div>}
+      {showAsistir && (
+        <div className="full-screen-container">
+          <Asistir />
+          <button className='cerrar-btn' onClick={handleCerrarAsistir}>
+            Cerrar
+          </button>
+        </div>
+      )}
     </div>
   );
 }
