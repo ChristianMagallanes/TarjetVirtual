@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import imagenTarjeta from "./assets/tarjet.png";
 import "./App.css";
 import Asistir from './components/Asistir/Asistir';
