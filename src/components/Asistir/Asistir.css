@@ -9,36 +9,39 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    flex-direction: column;
+    
     gap: 10px;
    
 }
 .btn {
-    background-color: #ffffff4b;
-    cursor: pointer;
     border: hidden;
+    cursor: pointer;
+    background: none;
     font-size: 24px;
     color: #000000;
     padding: 5px;
-    border-radius: 30px;
+    border-bottom: solid 2px;
     font-family: 'Caveat', cursive;
 }
 .validar-btn2{
     background-color: transparent;
-    border-radius: 20px;
     border: hidden;
-    font-size: 20px;
+    font-size: 28px;
     cursor: pointer;
     color: #ffffff;
+    border-bottom: solid 2px;
     font-family: 'Caveat', cursive;
 }
 .compartir-whatsapp-btn{
     cursor: pointer;
     background:none;
     border: hidden;
+    position: absolute;
+    bottom: 10px;
+    left: 160px;
 }
 .wpp-ico{
-    font-size: 80px;
+    font-size: 50px;
     color: #4CAF50;
 }
 
@@ -46,24 +49,25 @@
 
   
   .form-btn.active.yes {
+   border-bottom: solid 4px green;
+    color: rgb(255, 255, 255);
     
-    color: white;
-    transition: .4s;
-    margin-bottom: 20px;
+    
+    
   }
   
   .form-btn.active.no {
-   
-    color: white;
-    margin-bottom: 20px;
-    transition: .4s;
+    border-bottom: solid red 4px;
+    color: rgb(255, 255, 255);
+    
+    
   }
   
   .form-btn.active.maybe {
     
     color: white;
-    margin-bottom: 20px;
-    transition: .4s;
+    
+   
   }
   
  
@@ -135,16 +139,17 @@
 /* Media query para tablet (entre 600px y 767px) */
 @media only screen and (max-width: 767px) {
     .imagen-tarjeta {
-        height: 400px;
+        height: 300px;
         width: 100%;
         animation: slideIn 2s ease-in-out;
     }
     .tarjet-text {
         text-align: left;
-        width: 90%;
+        width: 70%;
     }
     .text {
-        font-size: 27px;
+        font-size: 24px;
+        margin-top: 20px;
         color: #000000;
         font-family: 'Caveat', cursive;
         overflow: hidden;
@@ -169,7 +174,7 @@
     
     .tarjet-text{
         
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     .titulo-confirmacion{
         color: #fff;
@@ -179,25 +184,24 @@
     .form-btn {
         color: #fff;
         cursor: pointer;
-        font-size: 28px;
+        font-size: 20px;
         margin-bottom: 20px;
         margin-bottom: 0px;
         border: hidden;
         background: none;
-        border-radius: 20px;
-        transition: border-bottom 0.3s ease-in-out;
+       
         transition: .4s;
         
     }
+    
+    
     .validar-btn{
-        font-size: 18px;
+        font-size: 22px;
         padding: 2px 10px;
         border: hidden;
         background-color: transparent;
         
     }
-    .form-btn:hover {
-        border-bottom: solid 2px #3498db; /* Cambia el color a tu preferencia */
-    }
+    
      
    }
