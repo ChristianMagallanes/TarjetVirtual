@@ -171,7 +171,11 @@
         
         margin-bottom: 30px;
     }
-    
+    .titulo-confirmacion{
+        color: #fff;
+        font-family: 'Caveat', cursive;
+        font-size: 40px;
+    }
     .form-btn {
         color: #fff;
         cursor: pointer;

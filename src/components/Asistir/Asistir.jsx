@@ -93,7 +93,7 @@ const Asistir = () => {
 
   return (
     <div className='confirmar-container'>
-      <h2>Confirmacion</h2>
+      <h2 className='titulo-confirmacion'>Confirmacion</h2>
       <input
         className='input'
         type="text"
