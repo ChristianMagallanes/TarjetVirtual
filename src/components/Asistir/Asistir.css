@@ -16,6 +16,8 @@
 .btn {
     border: hidden;
     cursor: pointer;
+    position: absolute;
+    top: 200px;
     background: none;
     font-size: 24px;
     color: #000000;
