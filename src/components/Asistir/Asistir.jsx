@@ -3,6 +3,7 @@ import { collection, addDoc, query, where, getDocs } from 'firebase/firestore';
 import { db } from '../Firebase/FirebaseConfig';
 import { FaSquareWhatsapp } from 'react-icons/fa6';
 import Swal from 'sweetalert2';
+import { AiOutlineCheck, AiOutlineClose } from "react-icons/ai";
 import "./Asistir.css";
 
 const Asistir = () => {
@@ -109,10 +110,10 @@ const Asistir = () => {
       />
       <div className='confirmar-btns'>
         <button className={`form-btn yes ${asistira === true ? 'active' : ''}`} onClick={() => handleAsistencia(true)}>
-          Si asistiré
+          Si asistiré <AiOutlineCheck />
         </button>
         <button className={`form-btn no ${asistira === false ? 'active' : ''}`} onClick={() => handleAsistencia(false)}>
-          No asistiré
+          No asistiré <AiOutlineClose />
         </button>
         <button className="validar-btn2" onClick={handleValidar}>
           Validar
@@ -120,6 +121,7 @@ const Asistir = () => {
         <button className="compartir-whatsapp-btn" onClick={handleCompartirWhatsApp}>
           <FaSquareWhatsapp className='wpp-ico' />
         </button>
+        
       </div>
     </div>
   );

@@ -13,14 +13,24 @@
     gap: 10px;
    
 }
-
+.btn {
+    background-color: #ffffff4b;
+    cursor: pointer;
+    border: hidden;
+    font-size: 24px;
+    color: #000000;
+    padding: 5px;
+    border-radius: 30px;
+    font-family: 'Caveat', cursive;
+}
 .validar-btn2{
-    background: orange;
+    background-color: transparent;
     border-radius: 20px;
     border: hidden;
     font-size: 20px;
     cursor: pointer;
-    color: #fff;
+    color: #ffffff;
+    font-family: 'Caveat', cursive;
 }
 .compartir-whatsapp-btn{
     cursor: pointer;
@@ -85,23 +95,16 @@
     border-bottom: solid #f6aa93;
 }
 
-.btn {
-    background-color: #db3734;
-    border: hidden;
-    font-size: 24px;
-    color: #fff;
-    padding: 5px;
-    border-radius: 30px;
-}
+
 
 .form-btn {
     cursor: pointer;
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 0px;
     border: hidden;
     background: none;
     transition: .4s;
-   
+    font-family: 'Caveat', cursive;
 }
 
 
@@ -172,7 +175,7 @@
     .form-btn {
         color: #fff;
         cursor: pointer;
-        font-size: 18px;
+        font-size: 28px;
         margin-bottom: 20px;
         margin-bottom: 0px;
         border: hidden;
