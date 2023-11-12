@@ -15,11 +15,12 @@
 }
 
 .validar-btn2{
-    background: rgb(255, 255, 255);
+    background: orange;
+    border-radius: 20px;
     border: hidden;
-    font-size: 24px;
-    border-bottom: solid 2px;
+    font-size: 20px;
     cursor: pointer;
+    color: #fff;
 }
 .compartir-whatsapp-btn{
     cursor: pointer;
@@ -35,21 +36,21 @@
 
   
   .form-btn.active.yes {
-    background-color: #4CAF50; /* Color verde para "Si asistiré" */
+    
     color: white;
     transition: .4s;
     margin-bottom: 20px;
   }
   
   .form-btn.active.no {
-    background-color: #FF0000; /* Color rojo para "No asistiré" */
+   
     color: white;
     margin-bottom: 20px;
     transition: .4s;
   }
   
   .form-btn.active.maybe {
-    background-color: #FFA500; /* Color naranja para "Quizás asistiré" */
+    
     color: white;
     margin-bottom: 20px;
     transition: .4s;
@@ -110,15 +111,7 @@
    
   }
   
-  .text {
-    font-size: 20px;
-    
-    font-family: 'Caveat', cursive;
-    overflow: hidden;
-    text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto si se corta */
-    opacity: 0; /* Inicialmente oculto */
-    animation: fadeIn  forwards; /* Nombre de la animación, duración y retención del último fotograma */
-}
+  
 
 .mensaje{
     font-size: 38px;
@@ -148,8 +141,13 @@
         width: 90%;
     }
     .text {
-        font-size: 34px;
-        white-space: wrap;
+        font-size: 27px;
+        color: #000000;
+        font-family: 'Caveat', cursive;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto si se corta */
+        opacity: 0; /* Inicialmente oculto */
+        animation: fadeIn  forwards; /* Nombre de la animación, duración y retención del último fotograma */
     }
 }
 
@@ -167,11 +165,12 @@
    @media only screen and (max-width: 599px) {
     
     .tarjet-text{
-        margin-top: 30px;
+        
         margin-bottom: 30px;
     }
     
     .form-btn {
+        color: #fff;
         cursor: pointer;
         font-size: 18px;
         margin-bottom: 20px;
@@ -181,7 +180,7 @@
         border-radius: 20px;
         transition: border-bottom 0.3s ease-in-out;
         transition: .4s;
-        background-color: #f6aa93;
+        
     }
     .validar-btn{
         font-size: 18px;

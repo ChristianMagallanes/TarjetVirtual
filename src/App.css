@@ -8,9 +8,11 @@
   background-position: center;
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: #eef1ee;
+  
+ background-image: url(https://i.pinimg.com/736x/24/e1/f1/24e1f13a6ad72ce218affc9772dd08d9.jpg);
+ background-position: center;
+ background-size: 70vh;
 }
 .welcome-enter {
   opacity: 0;
@@ -51,7 +53,7 @@
 .welcome-text {
   
   color: #000;
-  font-size: 40px;
+  font-size: 10px;
   transform: translateY(-20px);
   transition: opacity 500ms, transform 500ms;
 }
@@ -97,7 +99,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 255, 255); /* Un fondo oscuro semi-transparente para destacar el contenedor */
+  background-size: 100vh;
+ background-image: url(https://i.pinimg.com/originals/5b/59/49/5b5949fa878d061c9f40664550af5020.gif);
   display: flex;
   justify-content: center;
   align-items: center;

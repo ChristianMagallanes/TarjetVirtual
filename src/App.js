@@ -5,7 +5,22 @@ import "./App.css";
 
 function App() {
   const [typedText, setTypedText] = useState('');
-  const [originalText,] = useState('hola soy martina y, quiero invitarte este tanto tanto a mi cumpleaños te invito a mi cumpleaños de 15 espero q la pasemos muy bien ekisde ekisde ekisde ajsdjasdas ay va la bala tajala la wea sucia ekisde por q xd xd exde mi primera chamba');
+  const [originalText,] = useState(`Queridos amigos y familiares,
+
+  Estamos emocionados de invitarlos a los Quince Años de [Nombre].
+  
+  Fecha: Fecha del Evento
+  Hora: Hora del Evento
+  Lugar: Dirección del Evento
+  
+  Únanse a nosotros para disfrutar de una noche llena de risas, música, baile y momentos inolvidables.
+  
+  Esperamos contar con su asistencia para compartir la alegría de este día tan especial.
+  
+  ¡Nos vemos allí!
+  
+  Con cariño,
+  [Su Nombre]`);
   const [showAsistir, setShowAsistir] = useState(false);
   const [showButton, setShowButton] = useState(false);
 
